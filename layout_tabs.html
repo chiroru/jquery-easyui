@@ -1,5 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN
+    http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ja">
   <head>
     <title>jQuery EasyUI Sample - Index</title>
@@ -12,21 +12,25 @@
   <body>
     <h1>jQuery EasyUI Sample - Layout Panel</h1>
     <hr/>
-    <div id="tt" class="easyui-tabs" style="width:500px;height:250px;">
+    <div id="tt" class="easyui-tabs" style="width:800px;height:250px;">
+      <div title="tab 1" style="padding:20px;display=none;">
+        tab 1
+      </div>
+      <div title="tab 2" data-options="closable:true" style="overflow:auto;padding:20px;display=none;">
+        tab 2
+      </div>
+      <div title="tab 3" data-options="iconCls: 'icon-reload', closable:true" style="overflow:auto;padding:20px;display=none;">
+        tab 3
+      </div>
+    </div>
     </div>
   </body>
   <script type="text/javascript">
-    jQuery('#p').panel({
-      width: 500,
-      height: 150,
-      title: 'My Panel',
-      tools: [{
-        iconCls: 'icon-add',
-        handler: function() { alert('new')}
-      },{
-        iconCls: 'icon-save',
-        handler: function() { alert('save')}
-        }]
-      });
+    jQuery('#tt').tabs({
+      border: false,
+      onSelect: function(title) {
+        alert(title + ' is selected');
+      }
+    });
   </script>
 </html>
