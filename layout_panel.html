@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+  <head>
+    <title>jQuery EasyUI Sample - Index</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="./css/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="./css/themes/icon.css">
+    <script type="text/javascript" src="./js/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.easyui.min.js"></script>
+  </head>
+  <body>
+    <h1>jQuery EasyUI Sample - Layout Panel</h1>
+    <hr/>
+    <div id="p" class="easyui-panel" title="My Panel"
+         style="width:500px;height:150px;padding:10px;background:#fafafa;"
+         data-options="iconCls:'icon-save',closable:true,  collapsible:true,minimizable:true,maximizable:true">
+      <p>panel content.</p>
+      <p>panel content.</p>
+    </div>
+  </body>
+  <script type="text/javascript">
+    jQuery('#p').panel({
+      width: 500,
+      height: 150,
+      title: 'My Panel',
+      tools: [{
+        iconCls: 'icon-add',
+        handler: function() { alert('new')}
+      },{
+        iconCls: 'icon-save',
+        handler: function() { alert('save')}
+        }]
+      });
+  </script>
+</html>
